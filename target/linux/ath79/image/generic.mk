@@ -517,7 +517,10 @@ define Device/panasonic_cz-taw1
   SOC := qca9533
   DEVICE_VENDOR := PANASONIC
   DEVICE_MODEL := CZ-TAW1
-  IMAGE_SIZE := 16192k
+  DEVICE_PACKAGES := kmod-fs-exfat kmod-fs-vfat kmod-usb-serial \
+  kmod-usb-serial-pl2303 kmod-usb-serial-cp210x kmod-usb-serial-ftdi \
+  kmod-usb-storage
+  IMAGE_SIZE := 16000k
 endef
 TARGET_DEVICES += panasonic_cz-taw1
 
