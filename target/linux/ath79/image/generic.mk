@@ -513,6 +513,14 @@ define Device/comfast_cf-e110n-v2
 endef
 TARGET_DEVICES += comfast_cf-e110n-v2
 
+define Device/panasonic_cz-taw1
+  SOC := qca9533
+  DEVICE_VENDOR := PANASONIC
+  DEVICE_MODEL := CZ-TAW1
+  IMAGE_SIZE := 16192k
+endef
+TARGET_DEVICES += panasonic_cz-taw1
+
 define Device/comfast_cf-e120a-v3
   SOC := ar9344
   DEVICE_VENDOR := COMFAST
