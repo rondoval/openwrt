@@ -327,7 +327,8 @@ ath79_setup_interfaces()
 		ucidef_add_switch "switch0" \
 			"0@eth0" "1:lan"
 		;;
-	etactica,eg200)
+	etactica,eg200|\
+	panasonic,cz-taw1)
 		ucidef_set_interface_lan "eth0" "dhcp"
 		;;
 	glinet,gl-ar750)
@@ -747,6 +748,10 @@ ath79_setup_macs()
 	netgear,wndrmac-v1|\
 	netgear,wndrmac-v2)
 		lan_mac=$(macaddr_setbit_la "$(mtd_get_mac_binary art 0x0)")
+		;;
+	panasonic,cz-taw1)
+		lan_mac=$(mtd_get_mac_binary art 0x6)
+		label_mac=$lan_mac
 		;;
 	phicomm,k2t)
 		lan_mac=$(k2t_get_mac "lan_mac")

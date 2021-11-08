@@ -323,6 +323,9 @@ openmesh,om5p-ac-v1)
 openmesh,om5p-an)
 	ucidef_set_led_netdev "lan" "LAN" "blue:lan" "eth0"
 	ucidef_set_led_switch "wan" "WAN" "blue:wan" "switch0" "0x02"
+panasonic,cz-taw1)
+	ucidef_set_led_timer "alive" "Blink" "green:status" "1000" "1000"
+	ucidef_set_led_netdev "net" "Network" "green:link" "br-lan" "tx rx"
 	;;
 pcs,cr3000)
 	ucidef_set_led_netdev "wan" "WAN" "blue:wan" "eth1"
