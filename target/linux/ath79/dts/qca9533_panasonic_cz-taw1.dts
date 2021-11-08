@@ -32,20 +32,20 @@
 			gpios = <&gpio 0 GPIO_ACTIVE_HIGH>;
 		};
 
-        check {
-            label = "check";
-            linux,code = <KEY_RFKILL>;
-            gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
-        };
+		check {
+			label = "check";
+			linux,code = <KEY_RFKILL>;
+			gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
+		};
 	};
 
 	leds {
 		compatible = "gpio-leds";
 
-        link_green {
-            label = "green:link";
-            gpios = <&gpio 3 GPIO_ACTIVE_HIGH>;
-        };
+		link_green {
+			label = "green:link";
+			gpios = <&gpio 3 GPIO_ACTIVE_HIGH>;
+		};
 
 		led_status_green: status_green {
 			label = "green:status";
@@ -72,12 +72,12 @@
 		output-high;
 	};
 
-    cncnt_link {
-        gpio-hog;
-        gpios = <10 GPIO_ACTIVE_HIGH>;
-        line-name = "CN-CNT-link";
-        input;
-    }
+//	cncnt_link {
+//		gpio-hog;
+//		gpios = <10 GPIO_ACTIVE_HIGH>;
+//		line-name = "CN-CNT-link";
+//		input;
+//	};
 };
 
 &usb0 {
@@ -94,7 +94,6 @@
 &usb_phy {
 	status = "okay";
 };
-
 
 &spi {
 	status = "okay";
@@ -123,13 +122,13 @@
 
 			partition@50000 {
 				label = "kernel";
-				reg = <0x050000 0x170000>;
+				reg = <0x050000 0x200000>;
 				read-only;
 			};
 
-			partition@1c0000 {
+			partition@250000 {
 				label = "rootfs";
-				reg = <0x1c0000 0xEC0000>;
+				reg = <0x250000 0xDA0000>;
 			};
 
 			art: partition@1080000 {
