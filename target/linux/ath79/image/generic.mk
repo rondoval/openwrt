@@ -513,17 +513,6 @@ define Device/comfast_cf-e110n-v2
 endef
 TARGET_DEVICES += comfast_cf-e110n-v2
 
-define Device/panasonic_cz-taw1
-  SOC := qca9533
-  DEVICE_VENDOR := PANASONIC
-  DEVICE_MODEL := CZ-TAW1
-  DEVICE_PACKAGES := kmod-usb2 kmod-fs-exfat kmod-fs-vfat kmod-usb-serial \
-  kmod-usb-serial-pl2303 kmod-usb-serial-cp210x kmod-usb-serial-ftdi \
-  kmod-usb-storage
-  IMAGE_SIZE := 16000k
-endef
-TARGET_DEVICES += panasonic_cz-taw1
-
 define Device/comfast_cf-e120a-v3
   SOC := ar9344
   DEVICE_VENDOR := COMFAST
@@ -1801,6 +1790,17 @@ define Device/openmesh_om5p-ac-v2
   SUPPORTED_DEVICES += om5p-acv2
 endef
 TARGET_DEVICES += openmesh_om5p-ac-v2
+
+define Device/panasonic_cz-taw1
+  SOC := qca9533
+  DEVICE_VENDOR := PANASONIC
+  DEVICE_MODEL := CZ-TAW1
+  DEVICE_PACKAGES := kmod-usb2 kmod-fs-exfat kmod-fs-vfat kmod-usb-serial \
+  kmod-usb-serial-pl2303 kmod-usb-serial-cp210x kmod-usb-serial-ftdi \
+  kmod-usb-storage
+  IMAGE_SIZE := 16000k
+endef
+TARGET_DEVICES += panasonic_cz-taw1
 
 define Device/pcs_cap324
   SOC := ar9344
