@@ -255,7 +255,6 @@ openmesh,om2p-hs-v4)
 	;;
 panasonic,cz-taw1)
 	ucidef_set_led_timer "alive" "Blink" "green:status" "1000" "1000"
-	ucidef_set_led_gpio "pumplink" "Heat Pump link" "green:link" "10" "1"
 	;;
 pcs,cr3000)
 	ucidef_set_led_netdev "wan" "WAN" "blue:wan" "eth1"
