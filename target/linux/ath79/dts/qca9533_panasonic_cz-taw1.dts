@@ -68,23 +68,16 @@
 	ehci_enable {
 		gpio-hog;
 		gpios = <14 GPIO_ACTIVE_HIGH>;
-		line-name = "ehci-power-enable";
+		line-name = "panasonic:power:usb";
 		output-high;
 	};
 
 	usb_hub_enable {
 		gpio-hog;
 		gpios = <11 GPIO_ACTIVE_HIGH>;
-		line-name = "usb-hub-power";
+		line-name = "panasonic:power:usbhub";
 		output-low;
 	};
-
-//	cncnt_link {
-//		gpio-hog;
-//		gpios = <10 GPIO_ACTIVE_HIGH>;
-//		line-name = "CN-CNT-link";
-//		input;
-//	};
 };
 
 &usb0 {
