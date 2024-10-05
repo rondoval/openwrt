@@ -89,6 +89,7 @@ platform_do_upgrade() {
 	linksys,ea8100-v1|\
 	linksys,ea8100-v2|\
 	mts,wg430223|\
+	netgear,eax12|\
 	netgear,r6220|\
 	netgear,r6260|\
 	netgear,r6350|\
@@ -118,6 +119,7 @@ platform_do_upgrade() {
 	xiaomi,mi-router-cr6608|\
 	xiaomi,mi-router-cr6609|\
 	xiaomi,redmi-router-ac2100|\
+	z-router,zr-2660|\
 	zyxel,nwa50ax|\
 	zyxel,nwa55axe)
 		nand_do_upgrade "$1"
